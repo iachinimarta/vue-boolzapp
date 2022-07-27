@@ -5,7 +5,7 @@
     --program-active-chat: #E9EBEB;
     --program-section-input-text: #F3EEEA;
     --program-sent-message: #D4FAB7;
-    --detail-color: #B1B1B1;
+    --detail-color: grey;
     --notice: #8BDAFE;
     --search: #FAFAFA;
 }
@@ -33,7 +33,7 @@ body {
 
 .program-container {
     min-width: 1000px;
-    max-width: 600px;
+    height: 600px;
     position: absolute;
     z-index: 9999;
     top: 30px;
@@ -44,14 +44,11 @@ body {
 
 .user-list {
     width: 35%;
+    border-right: 1px solid lightgray;
 }
 
 .chat {
     width: 65%;
-}
-
-.user-list, .chat {
-    border: 1px solid var(--detail-color);
 }
 
 .avatar-and-icons {
@@ -68,7 +65,7 @@ body {
 }
 
 .icons {
-    color: var(--detail-color);
+    color: #B1B1B1;
 }
 
 .fa-solid  {
@@ -155,14 +152,16 @@ body {
 .search-input {
     border-color: transparent;
     width: 100%;
+    padding-left: 5px;
 }
 
 .contacts {
     overflow-y: auto;
+    background-color: white;
+    height: calc(100% - 165px);
 }
 
 .contact-card {
-    background-color: white;
     padding: 10px;
 }
 
@@ -185,6 +184,50 @@ body {
 .contacts hr {
     color: lightgray;
     border: 1px solid;
+}
+
+/* RIGHT *********************************************************** RIGHT */
+
+
+.chat-avatar-text .last-msg {
+    color: gray;
+}
+
+.chat-area {
+    background-image: url(../img/mine.jpg);
+    width: 100%;
+    height: calc(100% - 105px);
+    overflow-y: auto;
+}
+
+.chat-new-msg {
+    height: 50px;
+    background-color: var(--program-frame-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-emoji, .chat-voice {
+    width: 50px;
+}
+
+.chat-input-container {
+    width: 100%;
+}
+
+.chat-input-container input {
+    width: 100%;
+    line-height: 30px;
+    border-radius: 5px;
+    border: transparent;
+    padding-left: 5px;
+}
+
+.chat-new-msg i {
+    color: var(--detail-color);
 }
 
 
