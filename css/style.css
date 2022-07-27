@@ -6,6 +6,8 @@
     --program-section-input-text: #F3EEEA;
     --program-sent-message: #D4FAB7;
     --detail-color: #B1B1B1;
+    --notice: #8BDAFE;
+    --search: #FAFAFA;
 }
 
 * {
@@ -30,8 +32,8 @@ body {
 }
 
 .program-container {
-    width: 1000px;
-    max-height: 600px;
+    min-width: 1000px;
+    max-width: 600px;
     position: absolute;
     z-index: 9999;
     top: 30px;
@@ -90,9 +92,100 @@ body {
     border-radius: 50%;
 }
 
-
-
-
-
 /* LEFT *********************************************************** LEFT */
+
+.notice {
+    display: flex;
+    align-items: center;
+    background-color: var(--notice);
+    padding: 10px 5px;
+}
+
+.notice-icon-container {
+    background-color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice-icon-container i {
+    color: var(--notice);
+}
+
+.notice-text {
+    margin-left: 10px;
+    line-height: 14px;
+}
+
+.new-notice-text {
+    font-size: 14px;
+}
+
+.new-notice-on {
+    color: var(--detail-color);
+    font-size: 12px;
+}
+
+.search {
+    padding: 10px 0;
+    background-color: var(--search);
+    text-align: center;
+}
+
+.search-icon {
+    display: inline;
+    width: 10%;
+    border: 1px solid lightgray;
+}
+
+.search-icon i {
+    font-size: 15px;
+    color: var(--detail-color);
+}
+
+.search-input-container {
+    border: 1px solid lightgray;
+    width: 85%;
+    display: inline-block;
+}
+
+.search-input {
+    border-color: transparent;
+    width: 100%;
+}
+
+.contacts {
+    overflow-y: auto;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 10px;
+}
+
+.contact-avatar {
+    display: flex;
+    justify-content: space-between;
+    line-height: 18px;
+}
+
+.last-msg {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.last-msg, .msg-time {
+    color: var(--detail-color);
+    font-size: 12px;
+}
+
+.contacts hr {
+    color: lightgray;
+    border: 1px solid;
+}
+
+
 
