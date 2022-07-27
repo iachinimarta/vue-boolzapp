@@ -14,116 +14,100 @@
 
     </head>
     <body>
-        <div class="background-container">
-            <div class="background-container-top"></div>
-            <div class="program-container">
-                
-                <div class="user-list">
-                    <div class="avatar-and-icons">
-                        <div class="avatar">
-                            <div class="avatar-img">
-                                <img src="img/avatar_1.jpg" alt="">
+        <div id="app">
+            <div class="background-container">
+                <div class="background-container-top"></div>
+                <div class="program-container">
+                    
+                    <div class="user-list">
+                        <div class="avatar-and-icons">
+                            <div class="avatar">
+                                <div class="avatar-img">
+                                    <img src="img/avatar_io.jpg" alt="">
+                                </div>
+                                <div class="avatar-name">Sofia</div>
                             </div>
-                            <div class="avatar-name">Testo</div>
+                            <div class="icons">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        <div class="notice">
+                            <div class="notice-icon-container">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="notice-text">
+                                <div class="new-notice-text">Ricevi notifiche di nuovi messaggi</div>
+                                <a href="#" class="new-notice-on">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <div class="search-container">
+                                <div class="search-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div class="search-input-container">
+                                    <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts">
+                            <div class="contact-card" v-for="(contact, index) in contacts">
+                                <div class="contact-avatar">
+                                    <div class="contact-avatar-left avatar">
+                                        <div class="avatar-img">
+                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                        </div>
+                                        <div class="contact-avatar-text">
+                                            <div class="avatar-name">{{contact.name}}</div>
+                                            <div class="last-msg">Ultimo messaggio inviato</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="msg-time">12:00</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="notice">
-                        <div class="notice-icon-container">
-                            <i class="fa-solid fa-bell-slash"></i>
-                        </div>
-                        <div class="notice-text">
-                            <div class="new-notice-text">Ricevi notifiche di nuovi messaggi</div>
-                            <a href="#" class="new-notice-on">Attiva notifiche desktop</a>
-                        </div>
-                    </div>
-                    <div class="search">
-                        <div class="search-container">
-                            <div class="search-icon">
+    
+                    <div class="chat">
+                        <div class="avatar-and-icons">
+                            <div class="avatar">
+                                <div class="avatar-img"></div>
+                                <div class="chat-avatar-text">
+                                    <div class="avatar-name">Testo</div>
+                                    <div class="last-msg">Ultimo messaggio inviato</div>
+                                </div>
+                            </div>
+                            <div class="icons">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <div class="search-input-container">
-                                <input type="text" class="search-input" placeholder="Cerca o inizia una nuova chat">
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="contacts">
-                        <div class="contact-card">
-                            <div class="contact-avatar">
-                                <div class="contact-avatar-left avatar">
-                                    <div class="avatar-img">
-                                        <img src="img/avatar_1.jpg" alt="">
-                                    </div>
-                                    <div class="contact-avatar-text">
-                                        <div class="avatar-name">Testo</div>
-                                        <div class="last-msg">Ultimo messaggio inviato</div>
-                                    </div>
-                                </div>
-                                
+    
+                        <div class="chat-area">
+                            <div class="received-msg msg-shape">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores, excepturi earum dicta laborum consectetur similique vitae cumque explicabo voluptatum iure facere! Accusamus veritatis magni ipsa assumenda, blanditiis eaque ducimus!
+                                <div class="msg-time">12:00</div>
+                            </div>
+                            <div class="sent-msg msg-shape">
+                                Inviato
                                 <div class="msg-time">12:00</div>
                             </div>
                         </div>
-                        <hr>
-
-                        <div class="contact-card">
-                            <div class="contact-avatar">
-                                <div class="contact-avatar-left avatar">
-                                    <div class="avatar-img">
-                                        <img src="img/avatar_1.jpg" alt="">
-                                    </div>
-                                    <div class="contact-avatar-text">
-                                        <div class="avatar-name">Testo</div>
-                                        <div class="last-msg">Ultimo messaggio inviato</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="msg-time">12:00</div>
+    
+                        <div class="chat-new-msg">
+                            <div class="chat-emoji">
+                                <i class="fa-regular fa-face-smile"></i>
                             </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-
-                <div class="chat">
-                    <div class="avatar-and-icons">
-                        <div class="avatar">
-                            <div class="avatar-img"></div>
-                            <div class="chat-avatar-text">
-                                <div class="avatar-name">Testo</div>
-                                <div class="last-msg">Ultimo messaggio inviato</div>
+                            <div class="chat-input-container">
+                                <input type="text" placeholder="Scrivi un messaggio">
                             </div>
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </div>
-
-                    <div class="chat-area">
-                        <div class="received-msg msg-shape">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus maiores, excepturi earum dicta laborum consectetur similique vitae cumque explicabo voluptatum iure facere! Accusamus veritatis magni ipsa assumenda, blanditiis eaque ducimus!
-                            <div class="msg-time">12:00</div>
-                        </div>
-                        <div class="sent-msg msg-shape">
-                            Inviato
-                            <div class="msg-time">12:00</div>
-                        </div>
-                    </div>
-
-                    <div class="chat-new-msg">
-                        <div class="chat-emoji">
-                            <i class="fa-regular fa-face-smile"></i>
-                        </div>
-                        <div class="chat-input-container">
-                            <input type="text" placeholder="Scrivi un messaggio">
-                        </div>
-                        <div class="chat-voice">
-                            <i class="fa-solid fa-microphone"></i>
+                            <div class="chat-voice">
+                                <i class="fa-solid fa-microphone"></i>
+                            </div>
                         </div>
                     </div>
                 </div>

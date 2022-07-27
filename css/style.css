@@ -4,8 +4,8 @@
     --program-frame-color: #EAEAEA;
     --program-active-chat: #E9EBEB;
     --program-section-input-text: #F3EEEA;
-    --program-sent-message: white;
-    --program-received-message:  #D4FAB7;
+    --program-sent-message: #D4FAB7;
+    --program-received-message:  white;
     --detail-color: grey;
     --notice: #8BDAFE;
     --search: #FAFAFA;
@@ -77,7 +77,6 @@ body {
 .avatar-img {
     width: 45px;
     height: 45px;
-    border: 1px solid black;
     border-radius: 50%;
 }
 
@@ -180,11 +179,6 @@ body {
 .last-msg, .msg-time {
     color: var(--detail-color);
     font-size: 12px;
-}
-
-.contacts hr {
-    color: lightgray;
-    border: 1px solid;
 }
 
 /* RIGHT *********************************************************** RIGHT */
