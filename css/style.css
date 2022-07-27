@@ -239,6 +239,7 @@ body {
     background-color: var(--program-received-message);
     right: 20px;
     float: left;
+    clear: right;
 }
 
 .sent-msg {
