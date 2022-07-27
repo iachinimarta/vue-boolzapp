@@ -1,0 +1,39 @@
+:root {
+    --background-darkColor: #009788;
+    --background-lightColor: #D8DBD6;
+    --program-frame-color: #EAEAEA;
+    --program-active-chat: #E9EBEB;
+    --program-section-input-text: #F3EEEA;
+    --program-sent-message: #D4FAB7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.background-container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-lightColor);
+}
+
+.background-container-top {
+    background-color: var(--background-darkColor);
+    height: 150px;
+}
+
+.program-container {
+    width: 1000px;
+    max-height: 600px;
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
