@@ -5,6 +5,7 @@
     --program-active-chat: #E9EBEB;
     --program-section-input-text: #F3EEEA;
     --program-sent-message: #D4FAB7;
+    --detail-color: #B1B1B1;
 }
 
 * {
@@ -36,4 +37,62 @@ body {
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
 }
+
+.user-list {
+    width: 35%;
+}
+
+.chat {
+    width: 65%;
+}
+
+.user-list, .chat {
+    border: 1px solid var(--detail-color);
+}
+
+.avatar-and-icons {
+    background-color: var(--program-frame-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    color: var(--detail-color);
+}
+
+.fa-solid  {
+    padding: 0 5px;
+    font-size: 20px;
+}
+
+.avatar-img {
+    width: 45px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.avatar-name {
+    margin-left: 10px;
+}
+
+.avatar-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+/* LEFT *********************************************************** LEFT */
+
