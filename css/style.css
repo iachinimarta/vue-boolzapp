@@ -4,7 +4,8 @@
     --program-frame-color: #EAEAEA;
     --program-active-chat: #E9EBEB;
     --program-section-input-text: #F3EEEA;
-    --program-sent-message: #D4FAB7;
+    --program-sent-message: white;
+    --program-received-message:  #D4FAB7;
     --detail-color: grey;
     --notice: #8BDAFE;
     --search: #FAFAFA;
@@ -198,6 +199,7 @@ body {
     width: 100%;
     height: calc(100% - 105px);
     overflow-y: auto;
+    padding: 30px;    
 }
 
 .chat-new-msg {
@@ -228,6 +230,31 @@ body {
 
 .chat-new-msg i {
     color: var(--detail-color);
+}
+
+.msg-shape {
+    width: 250px;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.received-msg {
+    background-color: var(--program-received-message);
+    right: 20px;
+    float: left;
+}
+
+.sent-msg {
+    background-color: var(--program-sent-message);
+    clear: left;
+    float: right;
+}
+
+.msg-shape .msg-time {
+    text-align: right;
 }
 
 
