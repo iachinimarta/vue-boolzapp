@@ -184,6 +184,7 @@ body {
 /* RIGHT *********************************************************** RIGHT */
 
 
+
 .chat-avatar-text .last-msg {
     color: gray;
 }
@@ -250,6 +251,14 @@ body {
 
 .msg-shape .msg-time {
     text-align: right;
+}
+
+.MOSTRA {
+    display: block;
+}
+
+.NASCONDI {
+    display: none;
 }
 
 
