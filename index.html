@@ -57,17 +57,18 @@
                                 <div class="contact-avatar">
                                     <div class="contact-avatar-left avatar">
                                         <div class="avatar-img">
-                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                         </div>
                                         <div class="contact-avatar-text">
                                             <div class="avatar-name">{{contact.name}}</div>
                                             <div class="last-msg">Ultimo messaggio inviato</div>
                                         </div>
                                     </div>
-                                    
+                                        
                                     <div class="msg-time">12:00</div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
     
@@ -87,18 +88,10 @@
                             </div>
                         </div>
     
-                        <div class="chat-area">
+                        <div class="chat-area" >
                             <div class="messages">
-                                <div class="received-msg msg-shape" @click="takeMessage">
-                                    prova
-                                    <div class="msg-time">12:00</div>
-                                </div>
-                                <div class="sent-msg msg-shape">
-                                    Inviato
-                                    <div class="msg-time">12:00</div>
-                                </div>
-                                <div class="received-msg msg-shape" @click="takeMessage">
-                                    prova
+                                <div class="received-msg msg-shape">
+                                    Ricevuto
                                     <div class="msg-time">12:00</div>
                                 </div>
                                 <div class="sent-msg msg-shape">
@@ -111,6 +104,7 @@
     
                         <div class="chat-new-msg">
                             <div class="chat-emoji">
+                                <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="chat-input-container">
                                 <input type="text" placeholder="Scrivi un messaggio">
@@ -123,7 +117,7 @@
                 </div>
             </div>
         </div>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
