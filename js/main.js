@@ -163,6 +163,17 @@ var app = new Vue({
                     }
                 ],
             }
-        ]
+        ],
+        currentContact: 0,
+        newMessage: "",
+        newMessagelist : []
     },
+    methods: {
+        addElement() {
+            if (!this.newMessage == "") {
+                this.newMessagelist.push(this.newMessage);
+                this.newMessage = '';
+            }
+        },
+    }
 });

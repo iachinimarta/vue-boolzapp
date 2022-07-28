@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="contacts">
-                            <div class="contact-card" v-for="(contact, index) in contacts">
+                            <div class="contact-card" @click="currentContact = index" v-for="(contact, index) in contacts">
                                 <div class="contact-avatar">
                                     <div class="contact-avatar-left avatar">
                                         <div class="avatar-img">
@@ -72,15 +72,14 @@
                         </div>
                     </div>
     
-                    <div class="chat" v-for="contact in contacts">
-                
+                    <div class="chat">
                             <div class="avatar-and-icons">
                                 <div class="avatar">
-                                    <div class="avatar-img ">
-                                        <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
+                                    <div class="avatar-img">
+                                        <img :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="contactname">
                                     </div>
                                     <div class="chat-avatar-text">
-                                        <div class="avatar-name">{{contact.name}}</div>
+                                        <div class="avatar-name">{{contacts[currentContact].name}}</div>
                                         <div class="last-msg">Ultimo messaggio inviato</div>
                                     </div>
                                 </div>
@@ -94,15 +93,16 @@
                             <div class="chat-area">
                                 <div class="messages">
                                 
-                                    <div class="received-msg msg-shape" v-for="(message, index) in contact.messages">
+                                    <div class="received-msg msg-shape" v-for="(message, index) in contacts[currentContact].messages">
                                         {{message.message}}
                                         <div class="msg-time">12:00</div>
                                     </div>
-                                    <div class="sent-msg msg-shape">
-                                        Inviato
+                                    <div class="sent-msg msg-shape" v-for="(msg, index) in newMessagelist">
+                                        {{msg}}
                                         <div class="msg-time">12:00</div>
                                     </div>
                                 </div>
+                                
                                 
                             </div>
         
@@ -111,7 +111,7 @@
                                     <i class="fa-regular fa-face-smile"></i>
                                 </div>
                                 <div class="chat-input-container">
-                                    <input type="text" placeholder="Scrivi un messaggio">
+                                    <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addElement">
                                 </div>
                                 <div class="chat-voice">
                                     <i class="fa-solid fa-microphone"></i>

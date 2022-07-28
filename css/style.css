@@ -234,18 +234,20 @@ body {
     line-height: 20px;
     margin-bottom: 20px;
     display: block;
+
+    clear: both;
+    content: '';
+    display: table;
 }
 
 .received-msg {
     background-color: var(--program-received-message);
     right: 20px;
     float: left;
-    clear: right;
 }
 
 .sent-msg {
     background-color: var(--program-sent-message);
-    clear: left;
     float: right;
 }
 
@@ -253,13 +255,6 @@ body {
     text-align: right;
 }
 
-.MOSTRA {
-    display: block;
-}
-
-.NASCONDI {
-    display: none;
-}
 
 
 
