@@ -89,9 +89,10 @@
                         </div>
     
                         <div class="chat-area" >
-                            <div class="messages">
-                                <div class="received-msg msg-shape">
-                                    Ricevuto
+                            <div class="messages" v-for="contact in contacts">
+                            
+                                <div class="received-msg msg-shape" v-for="(message, index) in contact.messages">
+                                    {{message.message}}
                                     <div class="msg-time">12:00</div>
                                 </div>
                                 <div class="sent-msg msg-shape">
