@@ -180,6 +180,16 @@ var app = new Vue({
                 }
                 this.contacts[this.currentContact].messages.push(newMessagelist);
                 this.newMessage = '';
+
+                setTimeout(() => {
+                    const replyMessage = {
+                        date: DateTime.now().toFormat('dd/LL/y HH:mm:ss'),
+                        message: 'Ok!',
+                        status: 'received'
+                    };
+
+                    this.contacts[this.currentContact].messages.push(replyMessage);
+                }, 1000);
             }
         },
 
