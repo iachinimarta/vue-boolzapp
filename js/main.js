@@ -166,14 +166,23 @@ var app = new Vue({
         ],
         currentContact: 0,
         newMessage: "",
-        newMessagelist : []
     },
     methods: {
         addElement() {
+            
             if (!this.newMessage == "") {
-                this.newMessagelist.push(this.newMessage);
+                const newMessagelist = {
+                    date: '---',
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                this.contacts[this.currentContact].messages.push(newMessagelist);
                 this.newMessage = '';
             }
         },
+
+        indexOfCurrentContact(index) {
+            this.currentContact = index;
+        }
     }
 });

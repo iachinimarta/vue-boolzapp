@@ -181,6 +181,10 @@ body {
     font-size: 12px;
 }
 
+.active {
+    background-color: #F0F2F5;
+}
+
 /* RIGHT *********************************************************** RIGHT */
 
 
@@ -240,13 +244,13 @@ body {
     display: table;
 }
 
-.received-msg {
+.received {
     background-color: var(--program-received-message);
     right: 20px;
     float: left;
 }
 
-.sent-msg {
+.sent {
     background-color: var(--program-sent-message);
     float: right;
 }

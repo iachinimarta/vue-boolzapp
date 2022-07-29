@@ -25,7 +25,7 @@
                                 <div class="avatar-img">
                                     <img src="img/avatar_io.jpg" alt="">
                                 </div>
-                                <div class="avatar-name">Sofia</div>
+                                <div class="avatar-name">Marta</div>
                             </div>
                             <div class="icons">
                                 <i class="fa-solid fa-circle-notch"></i>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="contacts">
-                            <div class="contact-card" @click="currentContact = index" v-for="(contact, index) in contacts">
+                            <div class="contact-card" :class="(index == currentContact)?'active':''" @click="indexOfCurrentContact(index)" v-for="(contact, index) in contacts">
                                 <div class="contact-avatar">
                                     <div class="contact-avatar-left avatar">
                                         <div class="avatar-img">
@@ -76,7 +76,7 @@
                             <div class="avatar-and-icons">
                                 <div class="avatar">
                                     <div class="avatar-img">
-                                        <img :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="contactname">
+                                        <img :src="'img/avatar' + contacts[currentContact].avatar + '.jpg'" :alt="contacts[currentContact].name">
                                     </div>
                                     <div class="chat-avatar-text">
                                         <div class="avatar-name">{{contacts[currentContact].name}}</div>
@@ -92,18 +92,11 @@
         
                             <div class="chat-area">
                                 <div class="messages">
-                                
-                                    <div class="received-msg msg-shape" v-for="(message, index) in contacts[currentContact].messages">
+                                    <div class="msg-shape" :class="message.status" v-for="(message, index) in contacts[currentContact].messages">
                                         {{message.message}}
-                                        <div class="msg-time">12:00</div>
-                                    </div>
-                                    <div class="sent-msg msg-shape" v-for="(msg, index) in newMessagelist">
-                                        {{msg}}
-                                        <div class="msg-time">12:00</div>
+                                        <div class="msg-time">{{message.date}}</div>
                                     </div>
                                 </div>
-                                
-                                
                             </div>
         
                             <div class="chat-new-msg">
