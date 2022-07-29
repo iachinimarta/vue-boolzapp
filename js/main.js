@@ -1,3 +1,5 @@
+var DateTime = luxon.DateTime;
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -172,7 +174,7 @@ var app = new Vue({
             
             if (!this.newMessage == "") {
                 const newMessagelist = {
-                    date: '---',
+                    date: DateTime.now().toFormat('dd/LL/y HH:mm:ss'),
                     message: this.newMessage,
                     status: 'sent'
                 }
