@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="contacts">
-                            <div class="contact-card" :class="(index == currentContact)?'active':''" @click="indexOfCurrentContact(index)" v-for="(contact, index) in contacts">
+                            <div class="contact-card" :class="(index == currentContact)?'active':''" @click="indexOfCurrentContact(index)" v-for="(contact, index) in contacts" v-show="contact.name.toLowerCase().includes(input.toLowerCase())">
                                 <div class="contact-avatar">
                                     <div class="contact-avatar-left avatar">
                                         <div class="avatar-img">
