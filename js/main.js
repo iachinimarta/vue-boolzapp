@@ -168,6 +168,8 @@ var app = new Vue({
         ],
         currentContact: 0,
         newMessage: "",
+        input: "",
+
     },
     methods: {
         addElement() {
@@ -195,6 +197,6 @@ var app = new Vue({
 
         indexOfCurrentContact(index) {
             this.currentContact = index;
-        }
+        },
     }
 });

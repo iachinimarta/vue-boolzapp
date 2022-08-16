@@ -259,6 +259,13 @@ body {
     text-align: right;
 }
 
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
 
 
 
